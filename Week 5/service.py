@@ -20,30 +20,13 @@ app = Flask('credit')
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    #Predict if customer gets a credit card with model1
-    model,dv = get_model('model1.bin','dv.bin')
-    customer = request.get_json()
-
-    X = dv.transform([customer])
+    data = request.get_json()
+    client = data['client']
+    model = data['model']
     
-    y_pred = model.predict_proba(X)[0, 1]
-    is_credit = y_pred >= 0.5
+    model,dv = get_model(model,'dv.bin')    
 
-    result = {
-        'credit_probability': float(y_pred),
-        'is_credit': bool(is_credit)
-    }
-
-    return jsonify(result)
-
-
-@app.route('/predict2', methods=['POST'])
-def predict2():
-    #Predict if customer gets a credit card with model2
-    model,dv = get_model('model2.bin','dv.bin')
-    customer = request.get_json()
-
-    X = dv.transform([customer])
+    X = dv.transform([client])
     
     y_pred = model.predict_proba(X)[0, 1]
     is_credit = y_pred >= 0.5
