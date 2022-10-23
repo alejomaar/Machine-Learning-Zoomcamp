@@ -19,16 +19,3 @@ class MLZoomUser(HttpUser):
 
     wait_time = between(0.01, 2)
     
-'''
-QUESTION 6
-
-Which model has better performance at higher volumes?
-
-With a maximum concurrency of 2000 and a generation rate of 500.
-
-Model_1: RPS 612
-Model_2: RPS 563
-
-Model 1 has better performance at higher volumes.
-
-'''
