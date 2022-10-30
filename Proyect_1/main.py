@@ -19,17 +19,6 @@ class Features(BaseModel):
     action:float
     shopping:float
 
-
-
-#svc = bentoml.Service("iris_fastapi_demo", runners=[iris_clf_runner])
-
-'''@svc.api(input=JSON(), output=NumpyNdarray())
-def predict_bentoml(input_data) -> np.ndarray:
-    dv = bento_model.custom_objects['DictVectorizer']
-    vector = dv.transform(input_data.dict())
-    prediction = iris_clf_runner.predict.run(vector)[0]
-    return {"class":prediction}'''
-
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -38,29 +27,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-'''svc.mount_asgi_app(app)
-
-@app.get("/metadata")
-def metadata():
-    return {"name": bento_model.tag.name, "version": bento_model.tag.version}'''
-
-# For demo purpose, here's an identical inference endpoint implemented via FastAPI
-'''@app.post("/predict_fastapi")
-def predict(input_data):
-    dv = bento_model.custom_objects['DictVectorizer']
-    vector = dv.transform(input_data.dict())
-    prediction = iris_clf_runner.predict.run(vector)[0]
-    return {"class":prediction}
-
-# BentoML Runner's async API is recommended for async endpoints
-@app.post("/predict_fastapi_async")
-async def predict_async(input_data):
-    dv = bento_model.custom_objects['DictVectorizer']
-    vector = dv.transform(input_data.dict())
-    prediction = iris_clf_runner.predict.async_run(vector)
-    return {"class":prediction}'''
-
 
 @app.post("/test")
 async def pre(feat: Features):
@@ -75,6 +41,3 @@ async def pre(feat: Features):
 
     return {"class":label}
 
-'''@app.get("/test")
-async def pre2():
-    return {"class":'test'}'''
