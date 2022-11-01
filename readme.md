@@ -2,15 +2,15 @@
 
 Code as part of homework, or additional material as part of the [Machine Learning Engineering course](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) by Alexey Grigorev.
 
-| Left                                                                                         | Center  |                                                                                    Right |
-| :------------------------------------------------------------------------------------------- | :-----: | ---------------------------------------------------------------------------------------: |
-| [Week 1 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%201) | `intro` | [Week 1 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
-| [Week 2 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%202) | `intro` | [Week 2 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
-| [Week 3 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%203) | `intro` | [Week 3 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
-| [Week 4 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%204) | `intro` | [Week 4 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
-| [Week 5 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%205) | `intro` | [Week 5 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
-| [Week 6 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%206) | `intro` | [Week 6 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
-| [Week 7 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%207) | `intro` | [Week 7 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| Code                                                                                         |      Title       |                                                                                     Post |
+| :------------------------------------------------------------------------------------------- | :--------------: | ---------------------------------------------------------------------------------------: |
+| [Week 1 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%201) |     `intro`      | [Week 1 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| [Week 2 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%202) |   `regression`   | [Week 2 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| [Week 3 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%203) | `classification` | [Week 3 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| [Week 4 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%204) |   `evaluation`   | [Week 4 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| [Week 5 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%205) |   `deployment`   | [Week 5 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| [Week 6 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%206) |     `trees`      | [Week 6 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
+| [Week 7 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%207) |    `bentoml`     | [Week 7 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
 
 - Midterm Project
 
