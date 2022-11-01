@@ -8,7 +8,6 @@ Code as part of homework, or additional material as part of the [Machine Learnin
 | [Week 1 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%201)
 | `intro`
 | [Week 1 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/)|
-
 | [Week 1 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%201)
 | `intro`
 | [Week 1 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/)|
