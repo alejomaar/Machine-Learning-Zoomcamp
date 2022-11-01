@@ -80,7 +80,7 @@
           body: JSON.stringify(body),
         };
 
-        fetch("http://127.0.0.1:3000/test", requestOptions)
+        fetch("http://127.0.0.1:3000/predict_bentoml", requestOptions)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

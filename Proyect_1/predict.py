@@ -37,12 +37,10 @@ svc = bentoml.Service("classifier",runners=[runner])
 svc.mount_asgi_app(app)
 print('BENTO ML')
 
-
 @app.post("/test")
 def pre(feat: Features):    
     vector = dv.transform(feat.dict())
     prediction = runner.predict.run(vector)
     label="men" if prediction[0]==1 else "women"
-
     return {"class":label}
 
