@@ -1,4 +1,4 @@
-#### Motivation
+## Motivation
 
 In the age of data and machine learning, information may not be as anonymous as you think. Your identity and characteristics may be revealed if other information about you is obtained. This project looks at how a personality test can reveal your male or female gender.
 
