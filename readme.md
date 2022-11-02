@@ -12,14 +12,8 @@ Code as part of homework, or additional material as part of the [Machine Learnin
 | [Week 6 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%206) |     `trees`      | [Week 6 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
 | [Week 7 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%207) |    `bentoml`     | [Week 7 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
 
-- Midterm Project
-
-#### Motivation
-
-Many datasets contain "anonymous" information, however, through data patterns, you can unhide some attributes. In this case, this project explores how answering 10 questions can predict your gender (female, male) with a X of accuracy.
-
 [Midterm proyect link](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Midterm_proyect)
 
-## If you like the project, it would be appreciated if you star this repo.
+#### If you like the project, it would be appreciated if you star this repo.
 
 [Linkedin](https://www.linkedin.com/in/manuelalejandroaponte/)
