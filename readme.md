@@ -14,8 +14,12 @@ Code as part of homework, or additional material as part of the [Machine Learnin
 
 - Midterm Project
 
-  - [Week 1 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%201)| **bold** | $1600 |
+#### Motivation
 
-  ## If you like the project, it would be appreciated if you star this repo.
+Many datasets contain "anonymous" information, however, through data patterns, you can unhide some attributes. In this case, this project explores how answering 10 questions can predict your gender (female, male) with a X of accuracy.
+
+[Midterm proyect link](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Midterm_proyect)
+
+## If you like the project, it would be appreciated if you star this repo.
 
 [Linkedin](https://www.linkedin.com/in/manuelalejandroaponte/)
