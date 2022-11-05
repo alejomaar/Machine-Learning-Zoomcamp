@@ -60,17 +60,21 @@
     <script>
       const request = () => {
         const body = {
-          weight: 200,
-          height: 200,
+          height: 0,
+          weight: 0,
           life_struggles: 0,
-          cars: 5,
           pc: 0,
-          war: 5,
-          reading: 0,
-          romantic: 0,
-          spiders: 0,
-          action: 0,
           shopping: 0,
+          war: 0,
+          action: 0,
+          cars: 0,
+          science_and_technology: 0,
+          romantic: 0,
+          reading: 0,
+          western: 0,
+          dancing: 0,
+          theatre: 0,
+          darkness: 0,
         };
         const requestOptions = {
           method: "POST",
@@ -80,14 +84,7 @@
           body: JSON.stringify(body),
         };
 
-        fetch("http://127.0.0.1:3000/predict_bentoml", requestOptions)
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          });
-      };
-      const get = () => {
-        fetch("http://127.0.0.1:8000/test")
+        fetch("http://54.204.130.172:3000/classify", requestOptions)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

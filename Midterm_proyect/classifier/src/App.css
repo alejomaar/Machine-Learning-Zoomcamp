@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: calc(1vw+0.5rem);
+}
+.d-flex {
+  display: flex;
+}
+
+.app {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  outline: rgb(192, 192, 192) 2px solid;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+label {
+  display: block;
+}
