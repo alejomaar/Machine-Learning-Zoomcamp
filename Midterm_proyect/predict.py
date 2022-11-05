@@ -35,7 +35,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model_reference = bentoml.sklearn.get('ml_proyect:s7orz7c4vkqlilhq')
+model_reference = bentoml.sklearn.get('ml_proyect:latest')
 dv = model_reference.custom_objects['DictVectorizer']
 
 runner = model_reference.to_runner()

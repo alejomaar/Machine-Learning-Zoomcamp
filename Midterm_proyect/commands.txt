@@ -1,0 +1,5 @@
+pipenv run bentoml models list
+pipenv run bentoml models delete ml_proyect
+pipenv shell
+bentoml containerize classifier:p774qfs5f6uoqlhq
+docker run -it --rm -p 3000:3000 classifier:p774qfs5f6uoqlhq serve --production

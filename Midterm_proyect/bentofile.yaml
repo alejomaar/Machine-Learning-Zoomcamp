@@ -1,0 +1,16 @@
+service: "predict:svc" # Same as the argument passed to `bentoml serve`
+labels:
+  owner: alejandro
+  stage: dev
+include:
+  - "*.py" # A pattern for matching which files to include in the bento
+  - "*.csv" # A pattern for matching which files to include in the bento
+  - "*.html" # A pattern for matching which files to include in the bento
+python:
+  packages: # Additional pip packages required by the service
+    - scikit-learn
+    - pandas
+    - numpy
+    - fastapi
+docker:
+  python_version: "3.8.12"
