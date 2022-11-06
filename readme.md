@@ -12,8 +12,10 @@ Code as part of homework, or additional material as part of the [Machine Learnin
 | [Week 6 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%206) | `Decision Trees and Ensemble Learning`  | [Week 6 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
 | [Week 7 Homework](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Week%207) |               `Bento ML`                | [Week 7 Post](https://www.linkedin.com/feed/update/urn:li:activity:6991631483010482176/) |
 
+##Midterm Proyecto
 [Midterm proyect link](https://github.com/alejomaar/Machine-Learning-Zoomcamp/tree/main/Midterm_proyect)
+[Post](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)
 
-#### If you like the project, it would be appreciated if you star this repo.
+#### If you like the project, i would be appreciated if you star this repo.
 
 [Linkedin](https://www.linkedin.com/in/manuelalejandroaponte/)

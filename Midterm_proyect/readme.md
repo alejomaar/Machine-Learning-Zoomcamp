@@ -45,6 +45,8 @@ The code folder consists of:
 - Containerize service and deploy cloud - bentoml.file & bento.bentomodel </li>
 - (EXTRA) Webpage using React - webpage folder </li>
 
+[Post](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)
+
 # 3) Environment installation
 
 Clone the proyect
