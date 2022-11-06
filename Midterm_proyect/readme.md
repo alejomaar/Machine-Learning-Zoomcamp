@@ -1,12 +1,10 @@
-## Motivation
+# 1) About the project
+
+## 1.1) Motivation
 
 In the age of data and machine learning, information may not be as anonymous as you think. Your identity and characteristics may be revealed if other information about you is obtained. This project looks at how a personality test can reveal your male or female gender.
 
-# Overview
-
-This project is based on 10 questions, about personal preferences of each person. For each question, a user will answer agree or disagree on a scale of 1 to 5. The challenge of this project is that at the end of the test, the ml algorithm can predict the user's gender.
-
-## Business context
+## 1.2) Business context
 
 Good morning recruit! It's good to have you here! In our company PSYCAR needs to collect demographic information about our customers. For legal reasons we cannot collect the name or gender of the person, but we can collect any other type of information.
 
@@ -18,16 +16,127 @@ Thanks,
 
 Mr McManager
 
-## Contents of the folder
+# 2) Contents of the folder
+
+├── classifier
+│ ├── package.json
+│ ├── src
+│ ├── public
+├── bentofile.yaml
+├── bento.bentomodel
+├── columns.csv
+├── responses.csv
+├── notebook.ipynb
+├── Pipfile
+├── Pipfile.lock
+├── requirements.txt
+├── train.py
+└── predict.py
 
 The code folder consists of:
 
-<ul>
-<li> Data Cleaning & EDA - part of the notebook </li>
-<li> Training of model & Hyperparameter Tuning (output & outputless)* - part of notebook </li>
-<li> train.py - to train the final model + saving it using pickle </li>
-<li> predict.py - to load the model and serve it via a web service </li>
-<li> predict-test.py and predict-test-cloud.py - to test the output of the model, depending on where you want to use it </li>
-<li> pipenv and pipenv.lock for the virtunal environment using pipenv </li>
-<li> Dockerfile for using a Docker container </li>
-</ul>
+<li> Data Cleaning/EDA/model tunning - notebook.py </li>
+<li> responses.csv and columns.csv the data from [Kaggle](https://www.kaggle.com/datasets/miroslavsabo/young-people-survey) - notebook.py </li>
+<li> train the final model + saving it using bentoml - train.py  </li>
+<li> load the model and serve it via a web service - predict.py   </li>
+<li> Create Virtunal Environment - Pipenv and Pipenv.lock </li>
+<li> Containerize service and deploy cloud  - bentoml.file & bento.bentomodel </li>
+<li> (EXTRA) Webpage using react  - classifier folder </li>
+
+# 3) Environment installation
+
+Clone the proyect
+
+bash
+
+```
+git clone https://github.com/alejomaar/Machine-Learning-Zoomcamp.git
+```
+
+Create virtualenv
+
+bash
+
+```
+pipenv install
+```
+
+Activate virtualenv
+
+bash
+
+```
+pipenv shell
+```
+
+Import bentos
+
+bash
+
+```
+bentoml models import bento.bentomodel
+```
+
+OPTIONAL (Run React frontend)
+
+`!You must have npm and yarn installed`
+
+move into webpage folder
+
+bash
+
+```
+cd Midterm_proyect/classifier
+```
+
+install packages
+
+bash
+
+```
+yarn install
+```
+
+`The environment it's ready`
+
+# 4) Run code
+
+- If you want check EDA/Analysis process run notebook.ipynb
+- If you want retrain the model run `python train.py`
+- If you want deploy a service run `bentoml serve predict.py:svc
+- OPTIONAL If you want interact with service via frontend `yarn start` (in classifier folder)`
+
+# 5) How the deployed services look
+
+BentoML Service
+`Note`: It is already deployed in aws, check the url
+
+![bentoml](img/bentoml_service.JPG)
+
+Webpage
+
+![webpage](img/frontend.JPG)
+
+# 6) Deploy to cloud
+
+In this case we do not interact directly with docker, bentoml does it for us.
+
+bash
+
+```
+bentoml containerize classifier:p774qfs5f6uoqlhq
+```
+
+Most of the steps are done directly from AWS. Watch this video to see the complete step by step
+
+https://www.youtube.com/watch?v=aF-TfJXQX-w&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=72
+
+# 7) Results
+
+This project achieves:
+
+- an accuracy and auc of 94% for the `male` or `female` gender classification
+- Deploy a service with bentoML and fastAPI
+- Upload the service to AWS using ECR and ECS
+- Build a frontend application to consume AWS services
+- Manage virtual environment for replicability
