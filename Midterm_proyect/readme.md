@@ -18,10 +18,8 @@ Mr McManager
 
 # 2) Contents of the folder
 
-bash
-
 ```
-├── classifier
+├── webpage
 │ ├── package.json
 │ ├── src
 │ ├── public
@@ -45,13 +43,11 @@ The code folder consists of:
 - load the model and serve it via a web service - predict.py </li>
 - Create Virtunal Environment - Pipenv and Pipenv.lock </li>
 - Containerize service and deploy cloud - bentoml.file & bento.bentomodel </li>
-- (EXTRA) Webpage using react - classifier folder </li>
+- (EXTRA) Webpage using React - webpage folder </li>
 
 # 3) Environment installation
 
 Clone the proyect
-
-bash
 
 ```
 git clone https://github.com/alejomaar/Machine-Learning-Zoomcamp.git
@@ -59,15 +55,11 @@ git clone https://github.com/alejomaar/Machine-Learning-Zoomcamp.git
 
 Move to proyect
 
-bash
-
 ```
 cd Midterm_proyect
 ```
 
 Create virtualenv
-
-bash
 
 ```
 pipenv install
@@ -75,15 +67,11 @@ pipenv install
 
 Activate virtualenv
 
-bash
-
 ```
 pipenv shell
 ```
 
 Import bentos
-
-bash
 
 ```
 bentoml models import bento.bentomodel
@@ -95,15 +83,11 @@ OPTIONAL (Run React frontend)
 
 move into webpage folder
 
-bash
-
 ```
 cd Midterm_proyect/classifier
 ```
 
 install packages
-
-bash
 
 ```
 yarn install
