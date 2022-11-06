@@ -19,7 +19,8 @@ Mr McManager
 # 2) Contents of the folder
 
 bash
-'''
+
+```
 ├── classifier
 │ ├── package.json
 │ ├── src
@@ -34,7 +35,7 @@ bash
 ├── requirements.txt
 ├── train.py
 └── predict.py
-'''
+```
 
 The code folder consists of:
 
