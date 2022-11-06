@@ -53,6 +53,14 @@ bash
 git clone https://github.com/alejomaar/Machine-Learning-Zoomcamp.git
 ```
 
+Move to proyect
+
+bash
+
+```
+cd Midterm_proyect
+```
+
 Create virtualenv
 
 bash
