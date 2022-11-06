@@ -84,7 +84,7 @@ OPTIONAL (Run React frontend)
 move into webpage folder
 
 ```
-cd Midterm_proyect/classifier
+cd Midterm_proyect/webpage
 ```
 
 install packages
@@ -100,7 +100,7 @@ yarn install
 - If you want check EDA/Analysis process run notebook.ipynb
 - If you want retrain the model run `python train.py`
 - If you want deploy a service run `bentoml serve predict.py:svc
-- OPTIONAL If you want interact with service via frontend `yarn start` (in classifier folder)`
+- OPTIONAL If you want interact with service via frontend `yarn start` (in webpage folder)`
 
 # 5) How the deployed services look
 
@@ -126,6 +126,12 @@ bentoml containerize classifier:p774qfs5f6uoqlhq
 Most of the steps are done directly from AWS. Watch this video to see the complete step by step
 
 https://www.youtube.com/watch?v=aF-TfJXQX-w&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=72
+
+Link Service
+
+http://54.204.130.172:3000/#/Service%20APIs/classifier__BentoClassify
+
+it may not work because it stops service to avoid costs
 
 # 7) Results
 
