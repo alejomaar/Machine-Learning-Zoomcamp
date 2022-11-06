@@ -18,6 +18,8 @@ Mr McManager
 
 # 2) Contents of the folder
 
+bash
+'''
 ├── classifier
 │ ├── package.json
 │ ├── src
@@ -32,16 +34,17 @@ Mr McManager
 ├── requirements.txt
 ├── train.py
 └── predict.py
+'''
 
 The code folder consists of:
 
-<li> Data Cleaning/EDA/model tunning - notebook.py </li>
-<li> responses.csv and columns.csv the data from [Kaggle](https://www.kaggle.com/datasets/miroslavsabo/young-people-survey) - notebook.py </li>
-<li> train the final model + saving it using bentoml - train.py  </li>
-<li> load the model and serve it via a web service - predict.py   </li>
-<li> Create Virtunal Environment - Pipenv and Pipenv.lock </li>
-<li> Containerize service and deploy cloud  - bentoml.file & bento.bentomodel </li>
-<li> (EXTRA) Webpage using react  - classifier folder </li>
+- Data Cleaning/EDA/model tunning - notebook.py </li>
+- responses.csv and columns.csv the data from [Kaggle](https://www.kaggle.com/datasets/miroslavsabo/young-people-survey) - notebook.py </li>
+- train the final model + saving it using bentoml - train.py </li>
+- load the model and serve it via a web service - predict.py </li>
+- Create Virtunal Environment - Pipenv and Pipenv.lock </li>
+- Containerize service and deploy cloud - bentoml.file & bento.bentomodel </li>
+- (EXTRA) Webpage using react - classifier folder </li>
 
 # 3) Environment installation
 
@@ -143,7 +146,7 @@ https://www.youtube.com/watch?v=aF-TfJXQX-w&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHa
 
 This project achieves:
 
-- an accuracy and auc of 94% for the `male` or `female` gender classification
+- An accuracy and auc of 94% for the `male` or `female` gender classification
 - Deploy a service with bentoML and fastAPI
 - Upload the service to AWS using ECR and ECS
 - Build a frontend application to consume AWS services
