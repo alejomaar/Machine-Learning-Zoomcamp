@@ -20,11 +20,11 @@ Mr McManager
 
 ![bentoml](img/bentoml_service.JPG)
 
-- (EXTRA)A React page was developed to consume the service.
+- (EXTRA) React page was developed to consume the service.
 
 ![webpage](img/frontend.JPG)
 
-- ![Video](https://www.linkedin.com/feed/update/urn:li:activity:6994893310196600832/)
+[Evidence](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)
 
 - Metrics
 
@@ -172,4 +172,4 @@ http://54.204.130.172:3000/#/Service%20APIs/classifier__BentoClassify
 
 it may not work because it stops service to avoid costs
 
-- ![Video](https://www.linkedin.com/feed/update/urn:li:activity:6994893310196600832/)
+[Evidence](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)
