@@ -18,10 +18,10 @@ Code as part of homework, or additional material as part of the [Machine Learnin
 
 My midterm project is on gender classifier. This covers.
 
-- EDA/Importance of the function
+- EDA/Feature importance
 - Model selection (Logistics, NN, Random Forest)
 - Hyperparameter tuning
-- Removal of features
+- Feature elimination
 - Metrics
 - Create service with BentoML and FastAPI
 - Deploy to the cloud
