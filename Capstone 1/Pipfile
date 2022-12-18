@@ -9,6 +9,10 @@ ipykernel = "*"
 matplotlib = "*"
 scipy = "*"
 scikit-learn = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+opencv-python = "*"
+python-multipart = "*"
 
 [dev-packages]
 
