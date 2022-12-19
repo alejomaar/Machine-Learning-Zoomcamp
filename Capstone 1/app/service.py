@@ -3,7 +3,6 @@ from fastapi.responses import Response
 import os
 import cv2
 import numpy as np
-import base64
 from pydantic import BaseModel
 from starlette.responses import StreamingResponse
 
