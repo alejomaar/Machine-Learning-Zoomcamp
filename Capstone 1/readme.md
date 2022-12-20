@@ -8,26 +8,24 @@ OCR (Optical Character Recognition) are the techniques that seek to achieve this
 
 ## 1.2) Results
 
-- The model was deployed in aws
+### Deploying to AWS ECS in FastAPI
 
 ![aws_service](img/aws_service.JPG)
 
-
 - Metrics
 
-
-| precision | recall | f1-score | support |
-| :-------- | :----: | :------: | ------: |
-| 0.94      |  0.98  |   0.96   |     980 |
-| 0.97      |  0.98  |   0.98   |    1135 |
-| 0.94      |  0.90  |   0.92   |    1032 |
-| 0.90      |  0.92  |   0.91   |    1010 |
-| 0.93      |  0.93  |   0.93   |     982 |
-| 0.92      |  0.88  |   0.90   |     892 |
-| 0.94      |  0.95  |   0.95   |     958 |
-| 0.94      |  0.91  |   0.92   |    1028 |
-| 0.89      |  0.89  |   0.89   |     974 |
-| 0.91      |  0.91  |   0.91   |    1009 |
+| class | precision | recall | f1-score | support |
+| :---- | :-------: | :----: | :------: | ------: |
+| 0     |   0.94    |  0.98  |   0.96   |     980 |
+| 1     |   0.97    |  0.98  |   0.98   |    1135 |
+| 2     |   0.94    |  0.90  |   0.92   |    1032 |
+| 3     |   0.90    |  0.92  |   0.91   |    1010 |
+| 4     |   0.93    |  0.93  |   0.93   |     982 |
+| 5     |   0.92    |  0.88  |   0.90   |     892 |
+| 6     |   0.94    |  0.95  |   0.95   |     958 |
+| 7     |   0.94    |  0.91  |   0.92   |    1028 |
+| 8     |   0.89    |  0.89  |   0.89   |     974 |
+| 9     |   0.91    |  0.91  |   0.91   |    1009 |
 
 The model is very good classifying between 0,1,2 and 7 but a little worse classify 3 and 7.
 
@@ -46,8 +44,7 @@ The model is very good classifying between 0,1,2 and 7 but a little worse classi
 └── predict.py
 ```
 
-
-* Note: Dataset is iternal to keras 
+- Note: Dataset is internal to keras
 
 # 3) Environment installation
 
@@ -87,8 +84,10 @@ Build container
 docker image build -t digits .
 ```
 
+Run Container
+
 ```
-docker image build -t digits .
+docker run -it --rm -p 3000:3000 digits:latest
 ```
 
 `The environment it's ready`
@@ -100,10 +99,9 @@ docker image build -t digits .
 - If you want deploy a service run in app folder `uvicorn service:app --reload`
 - If you want build the container run in app folder `docker run -it --rm -p 3000:3000 digits:latest`
 
-# 6) Deploy to cloud
+# 6) Deploying FastAPI to AWS ECS
 
 We need to create a docker image with BentoML
-
 
 Most of the steps are done directly from AWS. Watch this video to see the complete step by step
 
@@ -142,7 +140,6 @@ In AWS ECS section
 
 Link Service
 
-http://3.92.196.77:3000/docs#/default/analyze_route_analyze_post
+http://3.92.196.77:3000/docs
 
 it may not work to avoid cost
-
