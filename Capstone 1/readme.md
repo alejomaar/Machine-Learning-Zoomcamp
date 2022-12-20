@@ -10,53 +10,44 @@ OCR (Optical Character Recognition) are the techniques that seek to achieve this
 
 - The model was deployed in aws
 
-![bentoml](img/bentoml_service.JPG)
+![aws_service](img/aws_service.JPG)
 
-- (EXTRA) React page was developed to consume the service.
-
-![webpage](img/frontend.JPG)
-
-[Evidence](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)
 
 - Metrics
 
-| Class  | Precision | Recall | f1-score |
-| :----- | :-------: | :----: | -------: |
-| male   |   0.96    |  0.93  |     0.94 |
-| female |   0.93    |  0.96  |     0.95 |
 
-`Of 150 characteristics, only 15 were taken for these results.`
+| precision | recall | f1-score | support |
+| :-------- | :----: | :------: | ------: |
+| 0.94      |  0.98  |   0.96   |     980 |
+| 0.97      |  0.98  |   0.98   |    1135 |
+| 0.94      |  0.90  |   0.92   |    1032 |
+| 0.90      |  0.92  |   0.91   |    1010 |
+| 0.93      |  0.93  |   0.93   |     982 |
+| 0.92      |  0.88  |   0.90   |     892 |
+| 0.94      |  0.95  |   0.95   |     958 |
+| 0.94      |  0.91  |   0.92   |    1028 |
+| 0.89      |  0.89  |   0.89   |     974 |
+| 0.91      |  0.91  |   0.91   |    1009 |
+
+The model is very good classifying between 0,1,2 and 7 but a little worse classify 3 and 7.
 
 # 2) Contents of the folder
 
 ```
-├── webpage
-│ ├── package.json
-│ ├── src
-│ ├── public
-├── bentofile.yaml
-├── bento.bentomodel
-├── columns.csv
-├── responses.csv
+├── app
+│ ├── digits.tflite
+│ ├── Dockerfile
+│ ├── requirements.txt
+│ ├── service.py
 ├── notebook.ipynb
 ├── Pipfile
 ├── Pipfile.lock
-├── requirements.txt
 ├── train.py
 └── predict.py
 ```
 
-The code folder consists of:
 
-- Data Cleaning/EDA/model tunning - notebook.py </li>
-- responses.csv and columns.csv the data from [Kaggle](https://www.kaggle.com/datasets/miroslavsabo/young-people-survey) - notebook.py </li>
-- train the final model + saving it using bentoml - train.py </li>
-- load the model and serve it via a web service - predict.py </li>
-- Create Virtunal Environment - Pipenv and Pipenv.lock </li>
-- Containerize service and deploy cloud - bentoml.file & bento.bentomodel </li>
-- (EXTRA) Webpage using React - webpage folder </li>
-
-[Post](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)
+* Note: Dataset is iternal to keras 
 
 # 3) Environment installation
 
@@ -69,7 +60,7 @@ git clone https://github.com/alejomaar/Machine-Learning-Zoomcamp.git
 Move to proyect
 
 ```
-cd Midterm_proyect
+cd "Capstone 1"
 ```
 
 Create virtualenv
@@ -84,26 +75,20 @@ Activate virtualenv
 pipenv shell
 ```
 
-Import bentos
+Move to app
 
 ```
-bentoml models import bento.bentomodel
+cd app
 ```
 
-OPTIONAL (Run React frontend)
-
-`!You must have npm ,yarn and node.js installed`
-
-move into webpage folder
+Build container
 
 ```
-cd Midterm_proyect/webpage
+docker image build -t digits .
 ```
 
-install packages
-
 ```
-yarn install
+docker image build -t digits .
 ```
 
 `The environment it's ready`
@@ -112,16 +97,13 @@ yarn install
 
 - If you want check EDA/Analysis process run notebook.ipynb
 - If you want retrain the model run `python train.py`
-- If you want deploy a service run `bentoml serve predict.py:svc
-- OPTIONAL If you want interact with service via frontend `yarn start` (in webpage folder)`
+- If you want deploy a service run in app folder `uvicorn service:app --reload`
+- If you want build the container run in app folder `docker run -it --rm -p 3000:3000 digits:latest`
 
 # 6) Deploy to cloud
 
 We need to create a docker image with BentoML
 
-```
-bentoml containerize classifier:p774qfs5f6uoqlhq
-```
 
 Most of the steps are done directly from AWS. Watch this video to see the complete step by step
 
@@ -138,14 +120,14 @@ Click in `view push command`
   `docker images`
 
 - tag your image
-  `docker tag gender-classifier:[`tag`] `your aws url` gender-classifier:latest`
+  `docker tag digits:latest:[`tag`] `your aws url` /digits:latest`
 
 - push image in aws with the `tag` of image
-  `docker push `your url`/gender-classifier:latest `
+  `docker push `your url`/digits:latest `
 
 `Note`: You can check all commands in your aws account
 
-![aws_commands](img/aws_commands.jpg)
+![aws_commands](img/aws_ecr.png)
 
 #### Create a ECS in AWS
 
@@ -160,8 +142,7 @@ In AWS ECS section
 
 Link Service
 
-http://54.204.130.172:3000/#/Service%20APIs/classifier__BentoClassify
+http://3.92.196.77:3000/docs#/default/analyze_route_analyze_post
 
-it may not work because it stops service to avoid costs
+it may not work to avoid cost
 
-[Evidence](https://www.linkedin.com/posts/manuelalejandroaponte_66daysofdata-mlzoomcamp-kaggle-activity-6994893310196600832-eWQL?utm_source=share&utm_medium=member_desktop)

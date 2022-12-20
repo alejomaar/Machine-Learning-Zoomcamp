@@ -1,2 +1,2 @@
-FastFood/
-*.h5
+**/*.h5
+**/*.tflite
