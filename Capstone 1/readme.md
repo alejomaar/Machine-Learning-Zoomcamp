@@ -2,9 +2,13 @@
 
 ## 1.1) Problem
 
-There are non-editable files, such as jpg, png and pdf. If you want to make these editable text files, you must convert their content (an image) and parse it to text.
+The MNIST dataset is considered the "Hello World" of computer vision. The MNIST database was created to provide a test bank for people who want to test pattern recognition methods or machine learning algorithms, classifying images to digits.
 
-OCR (Optical Character Recognition) are the techniques that seek to achieve this goal. In this case, we will use the classic MNIST dataset to convert images of digits into their respective characters.
+I consider this important to convert non-editable files, such as jpg, png and pdf into a editable text format.
+
+#### Dataset Summary
+The MNIST dataset consists of 70,000 28x28 black-and-white images of handwritten digits extracted from two NIST databases. There are 60,000 images in the training dataset and 10,000 images in the validation dataset, one class per digit so a total of 10 classes, with 7,000 images (6,000 train images and 1,000 test images) per class. Half of the image were drawn by Census Bureau employees and the other half by high school students (this split is evenly distributed in the training and testing sets).
+source: https://huggingface.co/datasets/mnist
 
 ## 1.2) Results
 
@@ -12,7 +16,10 @@ OCR (Optical Character Recognition) are the techniques that seek to achieve this
 
 ![aws_service](img/aws_service.JPG)
 
-- Metrics
+`Service here`: http://3.92.196.77:3000/docs
+
+
+### Metrics
 
 | class | precision | recall | f1-score | support |
 | :---- | :-------: | :----: | :------: | ------: |
@@ -28,6 +35,10 @@ OCR (Optical Character Recognition) are the techniques that seek to achieve this
 | 9     |   0.91    |  0.91  |   0.91   |    1009 |
 
 The model is very good classifying between 0,1,2 and 7 but a little worse classify 3 and 7.
+
+## Model
+
+Export keras model to tf-lite (Check digits.tflite)
 
 # 2) Contents of the folder
 
@@ -94,7 +105,7 @@ docker run -it --rm -p 3000:3000 digits:latest
 
 # 4) Run code
 
-- If you want check EDA/Analysis process run notebook.ipynb
+- If you want check EDA/Analysis/Train process run notebook.ipynb
 - If you want retrain the model run `python train.py`
 - If you want deploy a service run in app folder `uvicorn service:app --reload`
 - If you want build the container run in app folder `docker run -it --rm -p 3000:3000 digits:latest`
