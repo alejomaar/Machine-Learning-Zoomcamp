@@ -4,6 +4,8 @@ from PIL import Image
 import tflite_runtime.interpreter as tflite
 import numpy as np
 
+
+
 interpreter = tflite.Interpreter(model_path='dino_dragon.tflite')
 interpreter.allocate_tensors()
 

@@ -3,9 +3,20 @@ import tflite_runtime.interpreter as tflite
 from PIL import Image
 from io import BytesIO
 import numpy as np
-#uvicorn service:app --reload
+from fastapi.middleware.cors import CORSMiddleware
+
+#Configure API CORS
+app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 
+#Set global variables
 interpreter = tflite.Interpreter(model_path='digits.tflite')
 interpreter.allocate_tensors()
 
@@ -14,7 +25,6 @@ output_index = interpreter.get_output_details()[0]['index']
 
 classes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-app = FastAPI()
 
 def prepare_image(img, target_size):
 
