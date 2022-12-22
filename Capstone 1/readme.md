@@ -7,6 +7,7 @@ The MNIST dataset is considered the "Hello World" of computer vision. The MNIST 
 I consider this important to convert non-editable files, such as jpg, png and pdf into a editable text format.
 
 #### Dataset Summary
+
 The MNIST dataset consists of 70,000 28x28 black-and-white images of handwritten digits extracted from two NIST databases. There are 60,000 images in the training dataset and 10,000 images in the validation dataset, one class per digit so a total of 10 classes, with 7,000 images (6,000 train images and 1,000 test images) per class. Half of the image were drawn by Census Bureau employees and the other half by high school students (this split is evenly distributed in the training and testing sets).
 source: https://huggingface.co/datasets/mnist
 
@@ -18,6 +19,9 @@ source: https://huggingface.co/datasets/mnist
 
 `Service here`: http://3.92.196.77:3000/docs
 
+### Frontend APP
+
+![front](img/frontend_app.jpg)
 
 ### Metrics
 
@@ -37,18 +41,17 @@ source: https://huggingface.co/datasets/mnist
 The model is very good classifying between 0,1,2 and 7 but a little worse classify 3 and 7.
 
 ### Development
-* Create notebook por training model ,explore data and evaluate metrics
-* Create train.py script for generate new model
+
+- Create notebook por training model ,explore data and evaluate metrics
+- Create train.py script for generate new model
 
 ### Production
 
-* Export keras model to tf-lite (Check digits.tflite)
-* Create virtual environment
-* Create a dynamic frontend app for drawing digits
-* Create docker container
-* Serve a FastAPI service
-
-
+- Export keras model to tf-lite (Check digits.tflite)
+- Create virtual environment
+- Create a dynamic frontend app for drawing digits
+- Create docker container
+- Serve a FastAPI service
 
 # 2) Contents of the folder
 
@@ -74,6 +77,7 @@ The model is very good classifying between 0,1,2 and 7 but a little worse classi
 # 3) Environment installation
 
 ### Clone proyect
+
 Clone the proyect
 
 ```
@@ -85,7 +89,9 @@ Move to proyect
 ```
 cd "Capstone 1"
 ```
+
 ### Create virtual env
+
 Create virtualenv
 
 ```
@@ -99,6 +105,7 @@ pipenv shell
 ```
 
 ### Build service
+
 Move to backend
 
 ```
@@ -118,6 +125,7 @@ docker run -it --rm -p 3000:3000 digits:latest
 ```
 
 ### Open interactive frontend (Optional)
+
 Prerequisites: `npm or yarn`
 
 Open folder
@@ -127,12 +135,10 @@ cd frontend
 ```
 
 Build React App
-```npm i ``` or ```yarn install```
+`npm i ` or `yarn install`
 
 Open frontend
-```npm run start ``` or ```yarn start```
-
-
+`npm run start ` or `yarn start`
 
 # 4) Run code
 
