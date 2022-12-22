@@ -48,14 +48,15 @@ async def analyze_route(file: UploadFile = File(...)):
     X = np.array([x])
     X = prepare_input(X)
     X = X[...,np.newaxis]
-    print(X.shape)
       
     interpreter.set_tensor(input_index, X)
     interpreter.invoke()
     preds = interpreter.get_tensor(output_index)
 
     predict = preds[0]
-    predict_class = classes[predict.argmax()]
+    ind_max = predict.argmax()
+    predict_class = classes[ind_max]
+    proba = predict[ind_max]
 
-    return {'prediction':predict_class}
+    return {'prediction':predict_class,'proba':float(proba)}
     
