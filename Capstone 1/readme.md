@@ -17,7 +17,7 @@ source: https://huggingface.co/datasets/mnist
 
 ![aws_service](img/aws_service.JPG)
 
-`Service here`: http://3.92.196.77:3000/docs
+`Service here`: http://18.208.165.239:3000/docs
 
 ### Frontend APP
 
@@ -189,6 +189,6 @@ In AWS ECS section
 
 Link Service
 
-http://3.92.196.77:3000/docs
+http://18.208.165.239:3000/docs
 
 it may not work to avoid cost
