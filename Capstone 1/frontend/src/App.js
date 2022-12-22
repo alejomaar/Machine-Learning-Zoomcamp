@@ -38,10 +38,14 @@ const classify = async (file) => {
   var formData = new FormData();
   formData.append("file", blob, "img.png");
 
-  //Change url by http://127.0.0.1:3000/classify if you are in local.  
-  const req = await axios.post("http://18.208.165.239:3000/classify", formData, {
-    headers,
-  });
+  //Change url by http://127.0.0.1:3000/classify if you are in local.
+  const req = await axios.post(
+    "http://18.208.165.239:3000/classify",
+    formData,
+    {
+      headers,
+    }
+  );
   const data = req.data;
   return data;
 };
@@ -75,7 +79,7 @@ function App() {
           canvasWidth={400}
           canvasHeight={400}
           loadTimeOffset={0}
-          lazyRadius={-7}
+          lazyRadius={-4}
           brushRadius={15}
           ref={(canvasDraw) => setCanvas(canvasDraw)}
           brushColor={"white"}
@@ -106,7 +110,7 @@ function App() {
           <h1></h1>
         </div>
         <div className="subtitle">
-          <h2>Draw a digit</h2>
+          <h2>Information</h2>
         </div>
         <div className="info">
           <div className="circle">
