@@ -70,6 +70,10 @@ button {
   outline: none;
   color: white;
   border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #a816bf;
 }
 
 .info {

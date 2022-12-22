@@ -37,7 +37,9 @@ const classify = async (file) => {
 
   var formData = new FormData();
   formData.append("file", blob, "img.png");
-  const req = await axios.post("http://127.0.0.1:3000/analyze", formData, {
+
+  //Change url by http://127.0.0.1:3000/classify if you are in local.  
+  const req = await axios.post("http://18.208.165.239:3000/classify", formData, {
     headers,
   });
   const data = req.data;

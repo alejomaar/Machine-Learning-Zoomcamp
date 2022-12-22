@@ -36,8 +36,8 @@ def prepare_input(x):
     return x / 255.0
 
 
-@app.post("/analyze")
-async def analyze_route(file: UploadFile = File(...)):
+@app.post("/classify")
+async def digit_classify(file: UploadFile = File(...)):
     #Read image 
     buffer = await file.read()
     stream = BytesIO(buffer)

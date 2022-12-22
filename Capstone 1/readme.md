@@ -36,18 +36,32 @@ source: https://huggingface.co/datasets/mnist
 
 The model is very good classifying between 0,1,2 and 7 but a little worse classify 3 and 7.
 
-## Model
+### Development
+* Create notebook por training model ,explore data and evaluate metrics
+* Create train.py script for generate new model
 
-Export keras model to tf-lite (Check digits.tflite)
+### Production
+
+* Export keras model to tf-lite (Check digits.tflite)
+* Create virtual environment
+* Create a dynamic frontend app for drawing digits
+* Create docker container
+* Serve a FastAPI service
+
+
 
 # 2) Contents of the folder
 
 ```
-├── app
+├── backend
 │ ├── digits.tflite
 │ ├── Dockerfile
 │ ├── requirements.txt
 │ ├── service.py
+├── frontend
+│ ├── public/*
+│ ├── src/*
+│ ├── package.json
 ├── notebook.ipynb
 ├── Pipfile
 ├── Pipfile.lock
@@ -59,6 +73,7 @@ Export keras model to tf-lite (Check digits.tflite)
 
 # 3) Environment installation
 
+### Clone proyect
 Clone the proyect
 
 ```
@@ -70,7 +85,7 @@ Move to proyect
 ```
 cd "Capstone 1"
 ```
-
+### Create virtual env
 Create virtualenv
 
 ```
@@ -83,10 +98,11 @@ Activate virtualenv
 pipenv shell
 ```
 
-Move to app
+### Build service
+Move to backend
 
 ```
-cd app
+cd backend
 ```
 
 Build container
@@ -101,7 +117,22 @@ Run Container
 docker run -it --rm -p 3000:3000 digits:latest
 ```
 
-`The environment it's ready`
+### Open interactive frontend (Optional)
+Prerequisites: `npm or yarn`
+
+Open folder
+
+```
+cd frontend
+```
+
+Build React App
+```npm i ``` or ```yarn install```
+
+Open frontend
+```npm run start ``` or ```yarn start```
+
+
 
 # 4) Run code
 
