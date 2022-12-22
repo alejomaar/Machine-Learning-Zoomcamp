@@ -22,6 +22,7 @@ source: https://huggingface.co/datasets/mnist
 ### Frontend APP
 
 ![front](img/frontend_app.jpg)
+Video: https://www.linkedin.com/feed/update/urn:li:ugcPost:7011537805814177792/
 
 ### Metrics
 
